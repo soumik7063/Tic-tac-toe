@@ -3,8 +3,8 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
-let player1 = prompt("Enter the player1 Name :");
-let player2 = prompt("Enter the player2 Name :");
+let player1 = "player1";
+let player2 = "player2";
 
 let turnO = true; //playerX, playerO
 let count = 0; //To Track Draw
