@@ -72,3 +72,26 @@
   .hide {
     display: none;
   }
+
+.mode-selector {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mode-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mode-btn.active {
+  background-color: #b0413e;
+  transform: scale(1.05);
+}
