@@ -4,6 +4,7 @@ let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
+// Player symbol mapping
 const players = {
   O: "Player 1",
   X: "Player 2",
@@ -73,19 +74,20 @@ const showWinner = (symbol) => {
   disableBoxes();
 };
 
+// Explicits returns false
 const checkWinner = () => {
   for (let pattern of winPatterns) {
     let pos1Val = boxes[pattern[0]].innerText;
     let pos2Val = boxes[pattern[1]].innerText;
     let pos3Val = boxes[pattern[2]].innerText;
 
-    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-      if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        showWinner(pos1Val);
-        return true;
-      }
+    if (pos1Val !== "" && pos1Val === pos2Val && pos2Val === pos3Val) {
+      showWinner(pos1Val);
+      return true;
     }
   }
+
+  return false;  // Explicit return added
 };
 
 newGameBtn.addEventListener("click", resetGame);
