@@ -4,7 +4,6 @@ let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-// Player–Symbol Mapping
 const players = {
   O: "Player 1",
   X: "Player 2",
@@ -33,23 +32,18 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
-    if (turnO) {
-      //playerO
-      box.innerText = "O";
-      turnO = false;
-    } else {
-      //playerX
-      box.innerText = "X";
-      turnO = true;
-    }
+
+    box.innerText = turnO ? "O" : "X";
     box.disabled = true;
     count++;
 
-    let isWinner = checkWinner();
+// Stops exexution if winner is found
+    if (checkWinner()) return;
 
-    if (count === 9 && !isWinner) {
+    if (count === 9) {
       gameDraw();
     }
+    turnO = !turnO; // Switch turn only if no winner
   });
 });
 
@@ -72,9 +66,9 @@ const enableBoxes = () => {
   }
 };
 
-const showWinner = (winner) => {
-  if(winner === "O")msg.innerText = `Congratulations, Winner is ${player1}`;
-  else msg.innerText = `Congratulations , Winner is ${player2}`;
+//Winner display now uses mapping
+const showWinner = (symbol) => {
+  msg.innerText = `Congratulations, Winner is ${players[symbol]}`;
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
