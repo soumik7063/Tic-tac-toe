@@ -3,8 +3,12 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
-let player1 = "player1";
-let player2 = "player2";
+
+// Player–Symbol Mapping
+const players = {
+  O: "Player 1",
+  X: "Player 2",
+};
 
 let turnO = true; //playerX, playerO
 let count = 0; //To Track Draw
