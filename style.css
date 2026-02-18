@@ -55,8 +55,7 @@ body {
   }
   
   .box {
-    height: 16vmin;
-    width: 16vmin;
+    
     border-radius: 1rem;
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
@@ -67,24 +66,16 @@ body {
     font-weight: 400;
     font-style: normal;
   }
-
-  
-  #new-btn {
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color: #fff;
-    border-radius: 1rem;
-    border: none;
-  }
   
   #msg {
     color: #ffffc7;
-    font-size: 5vmin;
+    
+    
+  font-family: "Zen Dots", sans-serif;
   }
   
   .msg-container {
-    height: 100vmin;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,12 +111,11 @@ body {
 .reset .reset-btn{
   width: 150px;
   height: 50px;
-  background-color: rgb(177, 176, 176);
+  background-color: #191913;
   margin: 20px;
-  color: #000000;
+  color:  #fff;
   position: relative;
   overflow: hidden;
-  font-size: 14px;
   letter-spacing: 1px;
   font-weight: 500;
   text-transform: uppercase;
@@ -288,8 +278,10 @@ body {
 /* From uiverse.io by @Ali-Tahmazi99 */
 .anim-btn {
  display: inline-block;
- width: 150px;
- height: 50px;
+
+ 
+  font-family: "Geo", sans-serif;
+  
  border-radius: 10px;
  border: 1px solid #03045e;
  position: relative;
@@ -333,21 +325,10 @@ body {
 
 .anim-btn .sp1 {
  color: white;
- font-size: 18px;
  transition: all 0.3s ease-in;
 }
 
 
-/* .anim-btn:active {
-  transform: scale(0.95); 
-  border-color: #7b2cbf; 
-}
-
-.anim-btn:active::before,
-.anim-btn:active::after {
-  background: #9d4edd;
-  transition: all 0.1s; 
-} */
 .anim-btn.active{
   background-color: #5a189a;
   color:black;

@@ -174,6 +174,7 @@ const showWinner = (winner) => {
     msg.innerText = `Congratulations, Winner is ${winner === "O" ? "Player 1" : "Player 2"}`;
   }
   msgContainer.classList.remove("hide");
+
   gameActive = false;
   disableBoxes();
 };
