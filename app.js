@@ -38,13 +38,12 @@ boxes.forEach((box) => {
     box.disabled = true;
     count++;
 
-// Stops exexution if winner is found
     if (checkWinner()) return;
 
     if (count === 9) {
       gameDraw();
     }
-    turnO = !turnO; // Switch turn only if no winner
+    turnO = !turnO;
   });
 });
 
@@ -67,14 +66,12 @@ const enableBoxes = () => {
   }
 };
 
-//Winner display now uses mapping
 const showWinner = (symbol) => {
   msg.innerText = `Congratulations, Winner is ${players[symbol]}`;
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
 
-// Explicits returns false
 const checkWinner = () => {
   for (let pattern of winPatterns) {
     let pos1Val = boxes[pattern[0]].innerText;
@@ -87,7 +84,7 @@ const checkWinner = () => {
     }
   }
 
-  return false;  // Explicit return added
+  return false;
 };
 
 newGameBtn.addEventListener("click", resetGame);
