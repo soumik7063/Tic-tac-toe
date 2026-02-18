@@ -38,6 +38,7 @@ boxes.forEach((box) => {
     box.disabled = true;
     count++;
 
+    // Stops exexution if winner is found
     if (checkWinner()) return;
 
     if (count === 9) {
@@ -67,6 +68,7 @@ const enableBoxes = () => {
 };
 
 const showWinner = (symbol) => {
+
   msg.innerText = `Congratulations, Winner is ${players[symbol]}`;
   msgContainer.classList.remove("hide");
   disableBoxes();
