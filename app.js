@@ -1,5 +1,5 @@
 let boxes = document.querySelectorAll(".box");
-let resetBtn = document.querySelector("#reset-btn");
+let resetBtn = document.querySelector(".reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
@@ -71,6 +71,8 @@ const showWinner = (symbol) => {
 
   msg.innerText = `Congratulations, Winner is ${players[symbol]}`;
   msgContainer.classList.remove("hide");
+
+  gameActive = false;
   disableBoxes();
 };
 

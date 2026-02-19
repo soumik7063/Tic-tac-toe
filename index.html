@@ -2,35 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="logobg.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="msg-container hide">
-      <p id="msg">Winner</p>
-      <button id="new-btn">New Game</button>
+    <div class="gradient-bg">
+  <div class="blob" style="top: -10%; left: -10%; background: rgba(139, 92, 246, 0.2);"></div>
+  <div class="blob" style="bottom: 10%; right: -5%; animation-duration: 15s; background: rgba(6, 182, 212, 0.15);"></div>
+</div>
+    
     </div>
     <main>
-      <h1>Tic Tac Toe</h1>
-      <div class="mode-selector">
-        <button id="solo-btn" class="mode-btn">Solo (vs AI)</button>
-        <button id="multi-btn" class="mode-btn active">2 Players</button>
+      <div class="heading flex justify-center align-middle select-none lg:mt-[25px] md:[20px] mt-[15px]">
+        <img src="logo.png" alt="" class="rounded-3xl h-[50px] mr-[5px] cursor-pointer">
+      <h1 class="text-white lg:text-[36px] md:text-[35px] sm:text-[33px] text-[30px] ml-[5px] cursor-pointer">Tic Tac Toe</h1>
       </div>
+      
+      <div class="mode-selector">
+        <button id="solo-btn"  class="anim-btn lg:h-[50px] lg:w-[150px] md:h-[48px] md:w-[144px] h-[44px] w-[132px]"><span class="sp1 lg:text-[22px] text-[18px]">Solo (vs AI)</span></button>
+        <button id="multi-btn"  class="anim-btn active lg:h-[50px] lg:w-[150px] md:h-[48px] md:w-[144px] h-[44px] w-[132px]"><span class="sp1 lg:text-[22px] text-[18px]">2 Players</span></button>
+      </div>
+      <div class="msg-container hide">
+      <p id="msg" class="lg:text-[larger] sm:text-[large] text-[medium]">Winner</p>
+    </div>
       <div class="container">
         <div class="game">
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
+          <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
         </div>
       </div>
-      <button id="reset-btn">Reset Game</button>
+     
+      <!-- From Uiverse.io by Nawsome --> 
+<div class="reset">
+   <button class="reset-btn lg:text-[1.1rem] md:text-[1rem] text-[0.8rem]" id="new-btn"><span class="sp2"></span><p data-start="Good Luck!" data-text="start!" data-title="New Game"></p></button>
+</div>
     </main>
     <script src="app.js"></script>
   </body>
