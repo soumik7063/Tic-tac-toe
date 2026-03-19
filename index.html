@@ -39,6 +39,20 @@
       <div class="msg-container hide">
       <p id="msg" class="lg:text-[larger] sm:text-[large] text-[medium]">Winner</p>
     </div>
+      <div class="scoreboard" aria-label="Scoreboard">
+        <div class="score-card">
+          <p class="score-label">Player O</p>
+          <p id="score-o" class="score-value">0</p>
+        </div>
+        <div class="score-card">
+          <p class="score-label">Player X</p>
+          <p id="score-x" class="score-value">0</p>
+        </div>
+        <div class="score-card">
+          <p class="score-label">Draws</p>
+          <p id="score-draw" class="score-value">0</p>
+        </div>
+      </div>
       <div class="container">
         <div class="game">
           <button class="box lg:h-[16vmin] lg:w-[16vmin] md:h-[16vmin] md:w-[16vmin] sm:h-[17vmin] sm:w-[17vmin] h-[18vmin] w-[18vmin]" ></button>
@@ -56,6 +70,7 @@
       <!-- From Uiverse.io by Nawsome --> 
 <div class="reset">
    <button class="reset-btn lg:text-[1.1rem] md:text-[1rem] text-[0.8rem]" id="new-btn"><span class="sp2"></span><p data-start="Good Luck!" data-text="start!" data-title="New Game"></p></button>
+  <button class="reset-btn lg:text-[1.1rem] md:text-[1rem] text-[0.8rem]" id="reset-score-btn"><span class="sp2"></span><p data-start="Scores Cleared" data-text="clear!" data-title="Reset Score"></p></button>
 </div>
     </main>
     <script src="app.js"></script>

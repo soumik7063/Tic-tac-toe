@@ -94,6 +94,39 @@ body {
   gap: 1rem;
 }
 
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 1rem auto 1.5rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.score-card {
+  min-width: 120px;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(4px);
+}
+
+.score-label {
+  margin: 0;
+  color: #d9d9ff;
+  font-size: 0.9rem;
+  font-family: "Geo", sans-serif;
+  letter-spacing: 0.6px;
+}
+
+.score-value {
+  margin: 0.2rem 0 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Audiowide", sans-serif;
+}
+
 
 
 
@@ -103,7 +136,9 @@ body {
 /*success*/
 .reset {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
   top: 20px;
   left: 20px;
 }
