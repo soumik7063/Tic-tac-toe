@@ -1,8 +1,11 @@
 let boxes = document.querySelectorAll(".box");
-let resetBtn = document.querySelector(".reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
+let resetScoreBtn = document.querySelector("#reset-score-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let scoreO = document.querySelector("#score-o");
+let scoreX = document.querySelector("#score-x");
+let scoreDraw = document.querySelector("#score-draw");
 
 // Player symbol mapping
 const players = {
@@ -12,6 +15,11 @@ const players = {
 
 let turnO = true; //playerX, playerO
 let count = 0; //To Track Draw
+let scores = {
+  O: 0,
+  X: 0,
+  draw: 0,
+};
 
 const winPatterns = [
   [0, 1, 2],
@@ -29,6 +37,19 @@ const resetGame = () => {
   count = 0;
   enableBoxes();
   msgContainer.classList.add("hide");
+};
+
+const updateScoreUI = () => {
+  scoreO.innerText = scores.O;
+  scoreX.innerText = scores.X;
+  scoreDraw.innerText = scores.draw;
+};
+
+const resetScoreboard = () => {
+  scores.O = 0;
+  scores.X = 0;
+  scores.draw = 0;
+  updateScoreUI();
 };
 
 boxes.forEach((box) => {
@@ -49,6 +70,8 @@ boxes.forEach((box) => {
 });
 
 const gameDraw = () => {
+  scores.draw++;
+  updateScoreUI();
   msg.innerText = `Game was a Draw.`;
   msgContainer.classList.remove("hide");
   disableBoxes();
@@ -68,6 +91,8 @@ const enableBoxes = () => {
 };
 
 const showWinner = (symbol) => {
+  scores[symbol]++;
+  updateScoreUI();
 
   msg.innerText = `Congratulations, Winner is ${players[symbol]}`;
   msgContainer.classList.remove("hide");
@@ -92,4 +117,5 @@ const checkWinner = () => {
 };
 
 newGameBtn.addEventListener("click", resetGame);
-resetBtn.addEventListener("click", resetGame);
+resetScoreBtn.addEventListener("click", resetScoreboard);
+updateScoreUI();
